@@ -1,0 +1,8 @@
+dagster==1.4.7
+dagster-airbyte==0.20.7
+dagster-dbt==0.20.7
+dagster-docker==0.20.7
+dagster-graphql==1.4.7
+dagster-postgres==0.20.7
+dagster-webserver==1.4.7
+dbt-postgres==1.6.0
