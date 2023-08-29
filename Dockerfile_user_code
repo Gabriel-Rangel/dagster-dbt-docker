@@ -2,6 +2,7 @@ FROM python:3.9-slim
 
 # Checkout and install dagster libraries needed to run the gRPC server
 # exposing your repository to dagster-webserver and dagster-daemon, and to load the DagsterInstance
+RUN apt-get update && apt-get install -y git
 
 RUN pip install \
     dagster==1.4.7 \
@@ -13,15 +14,21 @@ RUN pip install \
     #dagster-webserver==1.4.7
 
 # Add repository code
+# where dbt stores its profiles.yml
+RUN mkdir -p /root/.dbt  
+COPY ["./src/profiles.yml", "/root/.dbt"]
 
 WORKDIR /opt/dagster/app
+COPY ["./src", "/opt/dagster/app"]
 
-COPY [".", "/opt/dagster/app"]
+#RUN dbt compile --project-dir ./src/kelihi_dbt
 
 # Run dagster gRPC server on port 4000
 
 EXPOSE 4000
 
 # CMD allows this to be overridden from run launchers or executors that want
-# to run other commands against your repository
+# to run other commands against your repositor
+
 CMD ["dagster", "api", "grpc", "-h", "0.0.0.0", "-p", "4000", "--package-name", "dagster_modules"]
+#CMD dbt debug --project-dir ./dbt/kelihi_dbt

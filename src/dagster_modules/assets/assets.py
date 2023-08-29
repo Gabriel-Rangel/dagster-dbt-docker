@@ -1,4 +1,6 @@
 from dagster import asset
+# from dagster_dbt.asset_defs import load_assets_from_dbt_project
+
 
 @asset
 def asset1():
@@ -11,3 +13,4 @@ def asset2():
 @asset(group_name="mygroup")
 def asset3():
 	pass
+
