@@ -2,4 +2,3 @@ venv/
 src/logs/
 src/.user.yml
 src/kelihi_dbt/logs/
-src/kelihi_dbt/logs/.user.yml
