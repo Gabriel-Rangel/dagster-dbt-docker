@@ -1,0 +1,24 @@
+kelihi_dbt:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 4
+      host: winhost
+      port: 5432
+      user: postgres
+      pass: 1q2w3e4r5ttg
+      dbname: dbt_dev
+      schema: dagster-dbt
+
+    prod:
+      type: postgres
+      threads: 4
+      host: winhost
+      port: 5432
+      user: postgres
+      pass: 1q2w3e4r5ttg
+      dbname: dbt_prod
+      schema: dagster-dbt
+
+  target: dev
