@@ -31,4 +31,6 @@ RUN pip install -r /opt/dagster/app/requirements.txt
 
 WORKDIR /opt/dagster/app/kelihi_dbt/kelihi_dagster
 
+EXPOSE 3000
+
 ENTRYPOINT ["dagster", "dev", "-h", "0.0.0.0", "-p", "3000"]
