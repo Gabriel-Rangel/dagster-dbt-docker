@@ -24,6 +24,8 @@ COPY kelihi_dbt /opt/dagster/app/kelihi_dbt
 # Copy requirements.txt to /usr/src
 COPY requirements.txt /opt/dagster/app/requirements.txt
 
+COPY dagster.yaml /opt/dagster/dagster_home/dagster.yaml
+
 # Install dependencie
 RUN pip install --upgrade pip
 RUN pip install -r /opt/dagster/app/requirements.txt
