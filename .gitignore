@@ -1,9 +1,6 @@
 venv/
 .vscode/
 dagster_home/
-
-
-kelihi_dbt/target/
 kelihi_dbt/dbt_modules/
 kelihi_dbt/logs/
 kelihi_dbt/kelihi_dagster/__pycache__/

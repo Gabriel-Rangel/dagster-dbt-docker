@@ -1,0 +1,61 @@
+{
+    "path_count": 106,
+    "parsed_path_count": 106,
+    "static_analysis_path_count": 5,
+    "static_analysis_parsed_path_count": 4,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.01828244800003631,
+    "load_macros_elapsed": 0.9260774540000511,
+    "parse_project_elapsed": 0.2906996409999465,
+    "patch_sources_elapsed": 9.743000191519968e-06,
+    "process_manifest_elapsed": 0.038101549999964845,
+    "load_all_elapsed": 1.3754593009998644,
+    "projects": [
+        {
+            "project_name": "helihi_dbt",
+            "elapsed": 0.2757626740001342,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.06404091300009895,
+                    "parsed_path_count": 5
+                },
+                {
+                    "parser": "seed",
+                    "elapsed": 0.035014945000057196,
+                    "parsed_path_count": 3
+                },
+                {
+                    "parser": "doc",
+                    "elapsed": 0.0006769340000118973,
+                    "parsed_path_count": 2
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.16993147599987424,
+                    "parsed_path_count": 2
+                }
+            ],
+            "parsed_path_count": 12
+        },
+        {
+            "project_name": "dbt_postgres",
+            "elapsed": 0.008397350999985065,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.0063887939998039656,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.000378534999981639,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        }
+    ]
+}
